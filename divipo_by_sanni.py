@@ -17,7 +17,7 @@ def leadmon(p:galois.Poly):
     return m[0]
 
 # Division by increasing power order of x
-def divipo(received: galois.Poly,generator: galois.Poly, distance:int, attempt=20):
+def divipo(received: galois.Poly,generator: galois.Poly, distance:int, attempt=n):
     t = (distance - 1)//2
     r = received
     q = galois.Poly([0],field=Rn)
