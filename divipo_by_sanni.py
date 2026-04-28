@@ -17,12 +17,12 @@ def leadmon(p:galois.Poly):
     return m[0]
 
 # Division by increasing power order of x
-def divipo(received: galois.Poly,generator: galois.Poly, distance:int, attempt=n):
+def divipo(received: galois.Poly,generator: galois.Poly, distance:int):
     t = (distance - 1)//2
     r = received
     q = galois.Poly([0],field=Rn)
     i = 0
-    while weight(r) > t and i < attempt:
+    while weight(r) > t and i < n:
         mg = leadmon(g)
         mr = leadmon(r)
         quot = mr // mg
