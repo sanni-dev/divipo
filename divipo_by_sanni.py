@@ -23,14 +23,12 @@ def divipo(received: galois.Poly,generator: galois.Poly, distance:int):
     q = galois.Poly([0],field=Rn)
     i = 0
     while weight(r) > t and i < n:
-        mg = leadmon(g)
+        mg = leadmon(generator)
         mr = leadmon(r)
         quot = mr // mg
-        r += quot * g
+        r += quot * generator
         q += quot
         i += 1
-    else:
-        print('Maximum attempts reached without successful decoding.')
     return r, q
 
     
